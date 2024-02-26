@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function Counter(){
 
@@ -13,6 +13,11 @@ const handleCounterBIncrement=()=>{
     setCounterB(prevState=>prevState+1);
 }
 
+useEffect(()=>{
+  const totalClicks = counterA + counterB;
+  document.title=`totalClicks ${totalClicks}`;
+
+}, [counterA, counterB])
     return(
     <>
     <button

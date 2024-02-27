@@ -2,6 +2,7 @@ import { Component } from "react";
 import { SignupForm } from "./SignUpForm";
 import { ColorPicker } from "./ColorPicker";
 import { Counter } from "./Counter";
+import { Clock } from "./Clock";
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
@@ -19,7 +20,8 @@ export class App extends Component {
       <>
       {/* <SignupForm/> */}
       {/* <ColorPicker options={colorPickerOptions}/> */}
-      <Counter/>
+      {/* <Counter/> */}
+      <Clock/>
       </>
     );
   }

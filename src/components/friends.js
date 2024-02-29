@@ -1,4 +1,7 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useContext } from 'react';
+import { authContext } from './authContext';
+
+
 
 const initalFriends = [
   'Kolby Thompson',
@@ -108,7 +111,8 @@ export function Friends (){
 const [count, setCount] = useState(0);
 const [friends] = useState(initalFriends);
 const [filter, setFilter] = useState('');
-
+const ctx = useContext(authContext);
+console.log(ctx)
 // const visibleFriends = friends.filter(friend =>
 //     friend.toLowerCase().includes(filter),
 //   );

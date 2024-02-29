@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
 import './index.css';
 import { authContext } from 'components/authContext';
-console.log(authContext)
+console.log(authContext.Provider)
 ReactDOM.createRoot(document.getElementById('root')).render(
  
   // <React.StrictMode>

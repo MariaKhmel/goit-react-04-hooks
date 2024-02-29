@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
 import './index.css';
-
+import { authContext } from 'components/authContext';
+console.log(authContext)
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+ 
+  // <React.StrictMode>
+  <authContext.Provider value={{name:'Mango'}}>
     <App />
-  </React.StrictMode>
+    </authContext.Provider>
+  // </React.StrictMode>
 );

@@ -1,35 +1,34 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useReducer } from "react"
+
+function countReducer (state, action){
+switch(action.type){
+
+    case('increment'):
+    console.log({...state, count : state.count + action.payload})
+    return {...state, count : state.count + action.payload};
+    case ('decrement'):
+        return {...state, count : state.count - action.payload};
+        default:
+            throw new Error(`unsupported ${action.type}`);
+}
+
+}
 
 export function Counter(){
 
-const [counterA, setCounterA] = useState(0);
-const [counterB, setCounterB] = useState(0);
+const [state, dispatch] = useReducer(countReducer, {count:0})
 
-const handleCounterAIncrement=()=>{
-    setCounterA(prevState=>prevState+1);
-}
-
-const handleCounterBIncrement=()=>{
-    setCounterB(prevState=>prevState+1);
-}
-
-useEffect(()=>{
-  const totalClicks = counterA + counterB;
-  document.title=`totalClicks ${totalClicks}`;
-
-}, [counterA, counterB])
     return(
     <>
+    <p>{state.count}</p>
     <button
     type="button"
-onClick={handleCounterAIncrement}
-    >Click Counter A {counterA} times
+onClick={()=>{dispatch({type:'increment', payload:1})}}> increment
     </button>
 
 <button
     type="button"
-onClick={handleCounterBIncrement}
-    >Click Counter B {counterB} times
+onClick={()=>{dispatch({type:'decrement', payload:1})}}>decrement
     </button>
     </>)
 }

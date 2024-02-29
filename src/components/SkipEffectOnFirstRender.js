@@ -10,11 +10,17 @@ useEffect(()=>{
         IsFirstRender.current=false;
         return;
     }
-
     console.log(Date.now())
 })
 
+const handleCounterIncrement=()=>{
+    setValue(prevState=>prevState+1);
+}
+
     return (<>
-    
+    <div>
+     <p> {value}</p>
+        <button type="button" onClick={handleCounterIncrement}>  Click </button>
+    </div>
     </>)
 }

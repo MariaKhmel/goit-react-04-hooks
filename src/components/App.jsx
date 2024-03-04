@@ -5,7 +5,7 @@ import { Counter } from "./Counter";
 import { Clock } from "./Clock";
 import { SkipEffectOnFirstRender } from "./SkipEffectOnFirstRender";
 import { Friends } from "./friends";
-
+import { LoadMorePage } from "./LoadMorePage";
 
 
 const colorPickerOptions = [
@@ -27,7 +27,8 @@ export class App extends Component {
       {/* <Counter/> */}
       {/* <Clock/> */}
       {/* <SkipEffectOnFirstRender /> */}
-      <Friends/>
+      {/* <Friends/> */}
+      <LoadMorePage/>
       </>
     );
   }

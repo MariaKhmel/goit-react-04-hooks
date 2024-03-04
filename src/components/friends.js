@@ -112,7 +112,7 @@ const [count, setCount] = useState(0);
 const [friends] = useState(initalFriends);
 const [filter, setFilter] = useState('');
 const ctx = useContext(authContext);
-console.log(ctx)
+// console.log(ctx)
 // const visibleFriends = friends.filter(friend =>
 //     friend.toLowerCase().includes(filter),
 //   );

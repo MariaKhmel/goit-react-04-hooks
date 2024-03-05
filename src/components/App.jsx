@@ -1,3 +1,17 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+import { SignupForm } from "./SignUpForm";
+
+export const App = () => {
+  return (
+    <>
+    <SignupForm/>
+    </>
+  );
+};
+=======
+>>>>>>> Stashed changes
 import { Component } from "react";
 import { SignupForm } from "./SignUpForm";
 import { ColorPicker } from "./ColorPicker";
@@ -35,3 +49,7 @@ export class App extends Component {
 }
  
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8abe07444b26bd8c250362062b2e6ef2278d1cde
+>>>>>>> Stashed changes
